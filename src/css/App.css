@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+  }
+  
+  .card-body-stars {
+    display: flex;
+  }
