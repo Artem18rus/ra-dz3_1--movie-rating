@@ -1,20 +1,18 @@
 import React from "react";
 import Star from "./Star";
 
-function Stars(props) {
-  let arrStars = [];
-
-  for (let i = 0; i < props.count; i++) {
-    arrStars.push(i);
-  }
-
+function Stars({ count }) {
   return (
     <ul className="card-body-stars">
-      {arrStars.map((el, idx) => (
-        <li className="item-stars" key={idx}>
-          <Star el={el} />
-        </li>
-      ))}
+      {count > 0 && count < 6
+        ? Array(count)
+            .fill()
+            .map((_, idx) => (
+              <li key={idx}>
+                <Star />
+              </li>
+            ))
+        : null}
     </ul>
   );
 }

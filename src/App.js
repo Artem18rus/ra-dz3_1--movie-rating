@@ -2,9 +2,9 @@ import "./css/App.css";
 import Stars from "./components/Stars";
 
 function App() {
-  let count = 3;
+  let count = 2;
 
-  return <Stars count={count > 0 && count < 6 ? count : null} />;
+  return <Stars count={count} />;
 }
 
 export default App;
